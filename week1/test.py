@@ -1,1 +1,3 @@
-disp("hi")
+print("hi")
+
+
