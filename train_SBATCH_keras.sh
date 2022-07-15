@@ -10,12 +10,12 @@
 
 . /etc/profile
 
-module load lang/miniconda3/4.8.3
+module load lang/miniconda3/4.10.3
 
-source activate py38_tf22_cs4921
+source activate py_39
 
 python trainer/task.py \
---model_dir="/h/marko.orescanin/models/mnist_tests$(date +%Y-%m-%d_%H-%M-%S)/" \
+--model_dir="/home/donald.peltier/smallwork/models/mnist_tests$(date +%Y-%m-%d_%H-%M-%S)/" \
 --model_type="fully_connected" \
 --num_epochs=10 \
 --batch_size=10 \
