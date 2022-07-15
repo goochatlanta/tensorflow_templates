@@ -15,7 +15,7 @@ module load lang/miniconda3/4.10.3
 source activate cs4321
 
 python trainer/task.py \
---model_dir="/h/elizabeth.gooch/models/mnist_tests$(date +%Y-%m-%d_%H-%M-%S)/" \
+--model_dir="/home/elizabeth.gooch/models/mnist_tests$(date +%Y-%m-%d_%H-%M-%S)/" \
 --model_type="fully_connected" \
 --num_epochs=10 \
 --batch_size=10 \
