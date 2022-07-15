@@ -36,12 +36,12 @@ def main():
     if not os.path.exists(hparams.model_dir):
         os.mkdir(hparams.model_dir)
 
-    params.save_hparams(hparams)
+    params.save_hparams(hparams) #save parameters
 
     # import data
 
     mnist = tf.keras.datasets.mnist
-    (x_train, y_train), (x_test, y_test) = mnist.load_data()
+    (x_train, y_train), (x_test, y_test) = mnist.load_data()  #when loaded comes as vector
 
     # %% make one_hot_encoded
     trainY = tf.keras.utils.to_categorical(y_train)
