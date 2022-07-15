@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/elizabeth.gooch/tensorflow_templates/trainer/task.py", line 20, in <module>
+    import yaml
+ModuleNotFoundError: No module named 'yaml'
