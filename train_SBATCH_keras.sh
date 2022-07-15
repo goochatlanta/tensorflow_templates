@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=marko.orescanin
+#SBATCH --job-name=elizabeth.gooch
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=4
@@ -12,10 +12,10 @@
 
 module load lang/miniconda3/4.10.3
 
-source activate py39_cs4321
+source activate cs4321
 
 python trainer/task.py \
---model_dir="/home/marko.orescanin/data/models/mnist_tests$(date +%Y-%m-%d_%H-%M-%S)/" \
+--model_dir="/home/elizabeth.gooch/models/mnist_tests$(date +%Y-%m-%d_%H-%M-%S)/" \
 --model_type="fully_connected" \
 --num_epochs=10 \
 --batch_size=10 \
