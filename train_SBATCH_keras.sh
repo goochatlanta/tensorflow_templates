@@ -6,11 +6,11 @@
 #SBATCH --mem=64G
 #SBATCH --time=00:10:00
 #SBATCH --output=titans-out-%j.txt
-#SBATCH --partition=cs4921
+#SBATCH --partition=beards
 
 . /etc/profile
 
-module load lang/miniconda3/4.8.3
+module load lang/miniconda3/4.10.3
 
 source activate py38_tf22_cs4921
 
