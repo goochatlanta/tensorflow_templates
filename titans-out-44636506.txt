@@ -1,0 +1,7 @@
+Namespace(model_dir='/h/elizabeth.gooch/models/mnist_tests2022-07-15_11-52-44/', test_dir=None, train_dir=None, val_dir=None, model_type='fully_connected', regression=False, input_shape=(28, 28), continue_training=False, checkpoint_path=None, predict=False, num_classes=10, num_epochs=10, batch_size=10, optimizer='adam', callback_list='checkpoint, csv_log', activation_fn='relu', base_learning_rate=0.001, loss_type='categorical_crossentropy', eval_metrics='accuracy', mgpu_run=False, n_gpus=1, use_multiprocessing=True, workers=6)
+Traceback (most recent call last):
+  File "/home/elizabeth.gooch/tensorflow_templates/trainer/task.py", line 74, in <module>
+    main()
+  File "/home/elizabeth.gooch/tensorflow_templates/trainer/task.py", line 37, in main
+    os.mkdir(hparams.model_dir)
+FileNotFoundError: [Errno 2] No such file or directory: '/h/elizabeth.gooch/models/mnist_tests2022-07-15_11-52-44/'
