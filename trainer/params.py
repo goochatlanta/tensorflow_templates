@@ -30,6 +30,7 @@ import datetime
 import yaml
 
 
+# ABSL library flags may be a better way of doing this
 def make_argparser():
     parser = argparse.ArgumentParser(description='Arguments to run training for GestureRecognitionModeling')
     parser.add_argument('--model_dir', type=str, required=True)
