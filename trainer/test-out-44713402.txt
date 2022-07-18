@@ -1,0 +1,8 @@
+2022-07-18 11:02:28.029992: I tensorflow/core/util/util.cc:169] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Namespace(model_dir='/home/jacob.slaughter/trainer/models/mnist_tests2022-07-18_11-02-27/', test_dir=None, train_dir=None, val_dir=None, model_type='fully_connected', regression=False, input_shape=(28, 28), continue_training=False, checkpoint_path=None, predict=False, num_classes=10, num_epochs=10, batch_size=10, optimizer='adam', callback_list='checkpoint, csv_log', activation_fn='relu', base_learning_rate=0.001, loss_type='categorical_crossentropy', eval_metrics='accuracy', mgpu_run=False, n_gpus=1, use_multiprocessing=True, workers=6)
+Traceback (most recent call last):
+  File "/home/jacob.slaughter/tensorflow_templates/trainer/task.py", line 74, in <module>
+    main()
+  File "/home/jacob.slaughter/tensorflow_templates/trainer/task.py", line 37, in main
+    os.mkdir(hparams.model_dir)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/jacob.slaughter/trainer/models/mnist_tests2022-07-18_11-02-27/'
