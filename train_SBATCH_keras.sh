@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=marko.orescanin
+#SBATCH --job-name=donald.peltier
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=6
@@ -12,7 +12,7 @@
 
 module load lang/miniconda3/4.8.3
 
-source activate py38_tf22_cs4921
+source activate py_39
 
 python trainer/task.py \
 --model_dir="/home/donald.peltier/tensorflow_templates/models/mnist_tests$(date +%Y-%m-%d_%H-%M-%S)/" \
