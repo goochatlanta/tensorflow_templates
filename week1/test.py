@@ -18,3 +18,5 @@ y = np.array([[5, 6]])
 
 print(x)
 print(y)
+
+print(np.concatenate((x, y),axis=0))
