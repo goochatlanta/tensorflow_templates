@@ -41,17 +41,17 @@ import IPython.display as display
 import numpy as np
 
 from matplotlib import rcParams
-import seaborn as sns
+#import seaborn as sns
 import matplotlib.pyplot as plt #plot
 import os
 
 
 # switch to seaborn default stylistic parameters
 # see the very useful https://seaborn.pydata.org/tutorial/aesthetics.html
-sns.set()
+#sns.set()
 # sns.set_context('notebook')
 # sns.set_context('paper') # smaller
-sns.set_context('talk')  # larger
+#sns.set_context('talk')  # larger
 
 # change default plot size
 rcParams['figure.figsize'] = 8, 6

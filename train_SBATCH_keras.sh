@@ -3,9 +3,15 @@
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=4
+<<<<<<< HEAD
 #SBATCH --mem=64G
 #SBATCH --time=00:10:00
 #SBATCH --output=titans-out-%j.txt
+=======
+#SBATCH --mem=16G
+#SBATCH --time=00:10:00
+#SBATCH --output=./logs_hamming/titans-out-%j.txt
+>>>>>>> origin/main
 #SBATCH --partition=beards
 
 . /etc/profile
