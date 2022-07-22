@@ -8,7 +8,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 #%%
-df = pd.read_csv('/home/donald.peltier/smallwork/models/mnist_tests2022-07-15_12-01-23/log.csv', delimiter=';')
+df = pd.read_csv('/home/donald.peltier/smallwork/data/models/mnist_tests2022-07-15_12-01-23/log.csv', delimiter=';')
 plt.plot(df['epoch'], df['loss'], 'b', linewidth= 2, label = "Training")
 plt.plot(df['epoch'], df['val_loss'], 'r', linewidth= 2, label = "Validation")
 plt.xlabel("epoch")
