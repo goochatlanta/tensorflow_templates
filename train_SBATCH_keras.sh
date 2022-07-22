@@ -5,7 +5,7 @@
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
 #SBATCH --time=00:10:00
-#SBATCH --output=/home/marko.orescanin/data/code/tensorflow_templates/logs_hamming/titans-out-%j.txt
+#SBATCH --output=./logs_hamming/titans-out-%j.txt
 #SBATCH --partition=beards
 
 . /etc/profile

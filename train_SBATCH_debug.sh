@@ -5,7 +5,7 @@
 #SBATCH --cpus-per-task=6
 #SBATCH --mem=64G
 #SBATCH --time=00:10:00
-#SBATCH --output=/logs_hamming/titans-out-%j.txt
+#SBATCH --output=./logs_hamming/titans-out-%j.txt
 #SBATCH --partition=kraken
 #SBATCH --nodelist=compute-8-5
 
@@ -24,7 +24,3 @@ python -m debugpy --wait-for-client --listen 0.0.0.0:54321 --log-to ./logs_debug
 --eval_metrics="accuracy" \
 --optimizer="adam" \
 --callback_list="checkpoint, csv_log"
-
-
-
-
