@@ -13,7 +13,7 @@
 
 module load lang/miniconda3/4.10.3
 
-source activate py39_cs4321
+source activate cs4321
 
 python -m debugpy --wait-for-client --listen 0.0.0.0:54321 --log-to ./logs_debugpy /home/david.martin/data/code/tensorflow_templates/trainer/task.py \
 --model_dir="/home/david.martin/data/models/mnist_tests$(date +%Y-%m-%d_%H-%M-%S)/" \

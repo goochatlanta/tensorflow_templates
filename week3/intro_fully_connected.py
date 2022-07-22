@@ -188,7 +188,7 @@ summarize_diagnostics(history)
 # %% now remember we always predict but with the model that did not
 # overfit!!
 
-model = tf.keras.models.load_model('checkpoint03-200.37.h5')
+model = tf.keras.models.load_model('checkpoint03-204.42.h5')
 
 # evaluate model
 _, acc = model.evaluate(x_test, testY, verbose=0)
