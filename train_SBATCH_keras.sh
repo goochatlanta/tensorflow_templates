@@ -1,21 +1,21 @@
 #!/bin/bash
-#SBATCH --job-name=marko.orescanin
+#SBATCH --job-name=slaughter
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:1
-#SBATCH --cpus-per-task=4
-#SBATCH --mem=16G
+#SBATCH --cpus-per-task=6
+#SBATCH --mem=32G
 #SBATCH --time=00:10:00
-#SBATCH --output=./logs_hamming/titans-out-%j.txt
+#SBATCH --output=test-out-%j.txt
 #SBATCH --partition=beards
 
 . /etc/profile
 
 module load lang/miniconda3/4.10.3
 
-source activate py39_cs4321
+source activate myEnv
 
-python trainer/task.py \
---model_dir="/home/marko.orescanin/data/models/mnist_tests$(date +%Y-%m-%d_%H-%M-%S)/" \
+python task.py \
+--model_dir="/home/jacob.slaughter/trainer/models/mnist_tests$(date +%Y-%m-%d_%H-%M-%S)/" \
 --model_type="fully_connected" \
 --num_epochs=10 \
 --batch_size=10 \
