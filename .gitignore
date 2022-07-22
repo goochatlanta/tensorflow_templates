@@ -217,4 +217,7 @@ nodeLanguageServer.*/**
 .DS_Store
 .DS_Store?
 
+# Hamming generated files
+########################3
+logs_hamming/
 
