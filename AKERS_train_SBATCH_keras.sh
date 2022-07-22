@@ -16,9 +16,9 @@ source activate cs4321
 
 python trainer/task.py \
 --model_dir="/home/matthew.akers/models/TF_Templates/" \
---model_type="fully_connected" \
---num_epochs=10 \
---batch_size=10 \
+--model_type="naive_fc" \
+--num_epochs=100 \
+--batch_size=32 \
 --num_classes=10 \
 --eval_metrics="accuracy" \
 --optimizer="adam" \
