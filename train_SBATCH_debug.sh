@@ -1,12 +1,12 @@
 #!/bin/bash
-#SBATCH --job-name=marko.orescanin
+#SBATCH --job-name=Alon.Kukliasnky.debug
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=6
 #SBATCH --mem=64G
 #SBATCH --time=00:10:00
 #SBATCH --output=./logs_hamming/titans-out-%j.txt
-#SBATCH --partition=kraken
+#SBATCH --partition=beards
 #SBATCH --nodelist=compute-8-5
 
 . /etc/profile
