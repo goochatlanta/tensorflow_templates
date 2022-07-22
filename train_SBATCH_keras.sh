@@ -5,28 +5,17 @@
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
 #SBATCH --time=00:10:00
-<<<<<<< HEAD
-#SBATCH --output=titans-out-%j.txt
-=======
-#SBATCH --output=./logs_hamming/titans-out-%j.txt
->>>>>>> 66095badeebf7d33ba94a67c7e6e0aa89939daa2
+#SBATCH --output=/home/eric.jimenez/models/tensorflow_templates/hamming_output
 #SBATCH --partition=beards
 
 . /etc/profile
 
 module load lang/miniconda3/4.10.3
 
-<<<<<<< HEAD
 source activate myEnv
 
 python trainer/task.py \
---model_dir="/home/eric.jimenez/models/mnist_tests$(date +%Y-%m-%d_%H-%M-%S)/" \
-=======
-source activate py39_cs4321
-
-python trainer/task.py \
---model_dir="/home/eric.jimenez/models/mnist_tests$(date +%Y-%m-%d_%H-%M-%S)/" \
->>>>>>> 66095badeebf7d33ba94a67c7e6e0aa89939daa2
+--model_dir="/home/eric.jimenez/models/tensorflow_templates/" \
 --model_type="fully_connected" \
 --num_epochs=10 \
 --batch_size=10 \
