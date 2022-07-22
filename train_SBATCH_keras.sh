@@ -1,21 +1,21 @@
 #!/bin/bash
-#SBATCH --job-name=marko.orescanin
+#SBATCH --job-name=david.martin
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=6
 #SBATCH --mem=64G
 #SBATCH --time=00:10:00
 #SBATCH --output=titans-out-%j.txt
-#SBATCH --partition=cs4921
+#SBATCH --partition=beards
 
 . /etc/profile
 
-module load lang/miniconda3/4.8.3
+module load lang/miniconda3/4.10.3
 
-source activate py38_tf22_cs4921
+source activate cs4321
 
 python trainer/task.py \
---model_dir="/h/marko.orescanin/models/mnist_tests$(date +%Y-%m-%d_%H-%M-%S)/" \
+--model_dir="/home/david.martin/smallwork/tensorflow_templates/models/mnist_tests$(date +%Y-%m-%d_%H-%M-%S)/" \
 --model_type="fully_connected" \
 --num_epochs=10 \
 --batch_size=10 \
