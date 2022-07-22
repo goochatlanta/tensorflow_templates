@@ -2,11 +2,12 @@
 #SBATCH --job-name=marko.orescanin
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:1
-#SBATCH --cpus-per-task=4
-#SBATCH --mem=16G
+#SBATCH --cpus-per-task=6
+#SBATCH --mem=64G
 #SBATCH --time=00:10:00
-#SBATCH --output=/home/marko.orescanin/data/code/tensorflow_templates/logs_hamming/titans-out-%j.txt
-#SBATCH --partition=beards
+#SBATCH --output=/logs_hamming/titans-out-%j.txt
+#SBATCH --partition=kraken
+#SBATCH --nodelist=compute-8-5
 
 . /etc/profile
 
@@ -14,7 +15,7 @@ module load lang/miniconda3/4.10.3
 
 source activate py39_cs4321
 
-python trainer/task.py \
+python -m debugpy --wait-for-client --listen 0.0.0.0:54321 --log-to ./logs_debugpy /home/marko.orescanin/data/code/tensorflow_templates/trainer/task.py \
 --model_dir="/home/marko.orescanin/data/models/mnist_tests$(date +%Y-%m-%d_%H-%M-%S)/" \
 --model_type="fully_connected" \
 --num_epochs=10 \
