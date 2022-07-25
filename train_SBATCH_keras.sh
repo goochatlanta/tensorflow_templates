@@ -7,12 +7,13 @@
 #SBATCH --time=00:10:00
 #SBATCH --output=./logs_hamming/titans-out-%j.txt
 #SBATCH --partition=beards
+#SBATCH --reservation=cs4321
 
 . /etc/profile
 
 module load lang/miniconda3/4.10.3
 
-source activate py39_cs4321
+source activate py_39
 
 python trainer/task.py \
 --model_dir="/home/donald.peltier/smallwork/data/models/mnist_tests$(date +%Y-%m-%d_%H-%M-%S)/" \
