@@ -15,9 +15,9 @@ module load lang/miniconda3/4.10.3
 source activate tfEnv
 
 python trainer/task.py \
---model_dir="/home/alon.kukliansky.is/Projects/models/mnist_tests$(date +%Y-%m-%d_%H-%M-%S)/" \
---model_type="fully_connected" \
---num_epochs=10 \
+--model_dir="/home/alon.kukliansky.is/Projects/models/mnist_tests_no_hidden$(date +%Y-%m-%d_%H-%M-%S)/" \
+--model_type="no_hidden" \
+--num_epochs=100 \
 --batch_size=10 \
 --num_classes=10 \
 --eval_metrics="accuracy" \
