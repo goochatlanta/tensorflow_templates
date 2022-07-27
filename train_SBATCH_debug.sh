@@ -1,22 +1,22 @@
 #!/bin/bash
-#SBATCH --job-name=marko.orescanin
+#SBATCH --job-name=elizabeth.gooch
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:1
-#SBATCH --cpus-per-task=6
-#SBATCH --mem=64G
+#SBATCH --cpus-per-task=2
+#SBATCH --mem=16G
 #SBATCH --time=00:10:00
 #SBATCH --output=./logs_hamming/titans-out-%j.txt
-#SBATCH --partition=kraken
-#SBATCH --nodelist=compute-8-5
+#SBATCH --partition=beards
+#SBATCH --nodelist=compute-8-13
 
 . /etc/profile
 
 module load lang/miniconda3/4.10.3
 
-source activate py39_cs4321
+source activate cs4321
 
-python -m debugpy --wait-for-client --listen 0.0.0.0:54321 --log-to ./logs_debugpy /home/marko.orescanin/data/code/tensorflow_templates/trainer/task.py \
---model_dir="/home/marko.orescanin/data/models/mnist_tests$(date +%Y-%m-%d_%H-%M-%S)/" \
+python -m debugpy --wait-for-client --listen 0.0.0.0:54321 --log-to ./logs_debugpy /home/elizabeth.gooch/tensorflow_templates/trainer/task.py \
+--model_dir="/home/elizabeth.gooch/models/mnist_tests$(date +%Y-%m-%d_%H-%M-%S)/" \
 --model_type="fully_connected" \
 --num_epochs=10 \
 --batch_size=10 \
