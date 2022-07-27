@@ -16,7 +16,7 @@ source activate cs4321
 
 python trainer/task.py \
 --model_dir="/home/elizabeth.gooch/models/mnist_tests$(date +%Y-%m-%d_%H-%M-%S)/" \
---model_type="fully_connected" \
+--model_type="simple_model" \
 --num_epochs=10 \
 --batch_size=10 \
 --num_classes=10 \
