@@ -2,8 +2,14 @@ import tensorflow as tf
 
 def create_fully_connected_model(hparams):
     model = tf.keras.models.Sequential([
+          #tf.keras.layers.Flatten(input_shape=hparams.input_shape),
+          #tf.keras.layers.Dense(200, activation='sigmoid'),
+          #tf.keras.layers.Dense(60, activation='sigmoid'),
+          #tf.keras.layers.Dense(10, activation='softmax')
           tf.keras.layers.Flatten(input_shape=hparams.input_shape),
           tf.keras.layers.Dense(200, activation='sigmoid'),
+          tf.keras.layers.Dense(150, activation='sigmoid'),
+          tf.keras.layers.Dense(100, activation='sigmoid'),
           tf.keras.layers.Dense(60, activation='sigmoid'),
           tf.keras.layers.Dense(10, activation='softmax')
         ])

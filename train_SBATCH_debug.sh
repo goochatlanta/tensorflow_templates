@@ -1,11 +1,11 @@
 #!/bin/bash
-#SBATCH --job-name=marko.orescanin
+#SBATCH --job-name=william.frazier
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=6
 #SBATCH --mem=64G
 #SBATCH --time=00:10:00
-#SBATCH --output=./logs_hamming/titans-out-%j.txt
+#SBATCH --output=titans-out-%j.txt
 #SBATCH --partition=kraken
 #SBATCH --nodelist=compute-8-5
 
@@ -13,10 +13,10 @@
 
 module load lang/miniconda3/4.10.3
 
-source activate py39_cs4321
+source activate myEnv
 
-python -m debugpy --wait-for-client --listen 0.0.0.0:54321 --log-to ./logs_debugpy /home/marko.orescanin/data/code/tensorflow_templates/trainer/task.py \
---model_dir="/home/marko.orescanin/data/models/mnist_tests$(date +%Y-%m-%d_%H-%M-%S)/" \
+python -m debugpy --wait-for-client --listen 0.0.0.0:54321 --log-to ./logs_debugpy /home/william.frazier/smallwork/code/tensorflow_templates/trainer/task.py \
+--model_dir="/home/william.frazier/smallwork/models/mnist_tests$(date +%Y-%m-%d_%H-%M-%S)/" \
 --model_type="fully_connected" \
 --num_epochs=10 \
 --batch_size=10 \
